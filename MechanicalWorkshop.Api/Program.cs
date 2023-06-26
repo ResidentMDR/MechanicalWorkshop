@@ -1,3 +1,5 @@
+using MechanicalWorkshop.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container .
@@ -21,5 +23,10 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var dbContext = new ApplicationDbContext())
+{
+    dbContext.SaveChanges();
+}
 
 app.Run();
