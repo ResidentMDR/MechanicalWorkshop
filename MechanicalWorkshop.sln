@@ -5,8 +5,6 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MechanicalWorkshop.Api", "MechanicalWorkshop.Api\MechanicalWorkshop.Api.csproj", "{27C98927-8206-428D-B0BF-53F20A82AF6C}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "angularapp", "MechanicalWorkshop.View\angularapp\angularapp.esproj", "{08F7409F-B71E-4F60-8A92-306D5E88025E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +15,6 @@ Global
 		{27C98927-8206-428D-B0BF-53F20A82AF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27C98927-8206-428D-B0BF-53F20A82AF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27C98927-8206-428D-B0BF-53F20A82AF6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08F7409F-B71E-4F60-8A92-306D5E88025E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08F7409F-B71E-4F60-8A92-306D5E88025E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08F7409F-B71E-4F60-8A92-306D5E88025E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{08F7409F-B71E-4F60-8A92-306D5E88025E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08F7409F-B71E-4F60-8A92-306D5E88025E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08F7409F-B71E-4F60-8A92-306D5E88025E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
