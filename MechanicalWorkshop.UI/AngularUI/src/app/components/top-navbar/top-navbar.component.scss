@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+}
+
+.container {
+    background-color: rgba(125, 6, 194, 0.518);
+    border: 3px rgba(125, 6, 194, 0.867) solid;
+    width: 100vw;
+    max-width: 100vw;
+    height: 8vh;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container * {
+    margin: 3px;
+}
+
+.top-nav-buttons {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: blue;
+}
+
+// button.pause svg {
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+button:hover {
+    background-color: rgba(97, 4, 113, 1);
+}
