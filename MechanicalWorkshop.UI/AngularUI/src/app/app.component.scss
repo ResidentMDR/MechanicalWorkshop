@@ -4,12 +4,17 @@ html {
 }
 
 body {
-    background-color: rgba(150, 180, 200, 0.541);
-    width: 100%;
+    //background-color: rgba(150, 180, 200, 0.541);
     height: 100%;
 }
 
-h1 {
-    display: flex;
-    justify-content: left;
+.header {
+    width: 100vw;
+    height: 6vh;
+    background-color: rgba(97, 156, 195, 0.541);
+    h1 {
+        display: flex;
+        justify-content: left;
+        margin-left: 50px;
+    }
 }

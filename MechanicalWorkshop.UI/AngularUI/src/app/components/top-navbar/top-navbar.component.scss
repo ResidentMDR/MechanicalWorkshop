@@ -1,14 +1,10 @@
-body {
-    width: 100%;
-}
-
 .container {
     background-color: rgba(125, 6, 194, 0.518);
     border: 3px rgba(125, 6, 194, 0.867) solid;
     width: 100vw;
     max-width: 100vw;
     height: 8vh;
-    display: inline-flex;
+    display: flex;
     justify-content: left;
     align-items: center;
 }
