@@ -11,6 +11,6 @@
         public string? FirstName { get; init; }
         public string? LastName { get; init; }
         public string? FullName { get; init; }
-        public Car Car { get; init; }
+        public ICollection<Car> Cars { get; }
     }
 }
