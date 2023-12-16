@@ -1,11 +1,16 @@
 .container {
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     margin-left: 85px;
+    display: flex;
+    align-items: top;
+    justify-content: top;
+    
 
     p {
         font-size: 24px;
         width: calc(100vw - 97px);
         background-color: rgba(150, 180, 200, 0.541);
+        margin: 5px;
     }
 }

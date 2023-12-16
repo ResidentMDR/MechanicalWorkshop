@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { LeftNavbarComponent } from './components/left-navbar/left-navbar.component';
 import { ContentViewComponent } from './components/content-view/content-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavbarComponent,
     LeftNavbarComponent,
-    ContentViewComponent
+    ContentViewComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
