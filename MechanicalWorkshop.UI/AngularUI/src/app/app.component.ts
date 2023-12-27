@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from './components/api-service/api.service';
-import { CustomerEntity } from './models/customer.model';
+import { ICustomer } from './interfaces/icustomer';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +8,16 @@ import { CustomerEntity } from './models/customer.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  customers: CustomerEntity[] = [];
+  customers: ICustomer[] = [];
   title = 'Mechanical Workshop';
 
   constructor(private apiService: APIService) {}
 
   ngOnInit(): void {
     this.apiService.getAllCustomers().subscribe(
-      (data: CustomerEntity[]) => {
+      (data: ICustomer[]) => {
         this.customers = data;
       },
-      (error) => {
-        console.error('Error fetching customers:', error);
-      }
     );
   }
 }

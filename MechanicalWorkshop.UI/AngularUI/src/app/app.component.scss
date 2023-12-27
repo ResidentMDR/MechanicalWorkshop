@@ -16,7 +16,6 @@ body {
     }
 }
 
-
 .header {
     width: 100vw;
     height: 6vh;
@@ -25,5 +24,21 @@ body {
         display: flex;
         justify-content: left;
         margin-left: 50px;
+    }
+}
+
+.customer-container {
+    margin-left: 100px;
+    padding: 5px;
+    .customer {
+        background-color: rgba(97, 156, 195, 0.541);
+        font-size: 24px;
+        margin: 10,10,10,10;
+        color: black;
+        display: block;
+        width: calc(100vw - 200px);
+    }   
+    .customer:hover {
+        background-color: rgba(125, 6, 194, 0.518);
     }
 }

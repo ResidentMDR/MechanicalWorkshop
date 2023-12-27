@@ -5,10 +5,12 @@
 <body>
     <div class="container">
         <div class="top-nav-buttons">
-            <button class="btn btn-primary">Home</button>
-            <button class="btn btn-primary">Customers</button>
-            <button class="btn btn-primary">Repairs</button>
-            <button class="btn btn-primary">Storage</button>
+            <nav>
+                <a [routerLink]="['/home']" routerLinkActive="active" class="btn btn-primary">Home</a>
+                <a [routerLink]="['/customers']" class="btn btn-primary">Customers</a>
+                <a [routerLink]="['/repairs']" class="btn btn-primary">Repairs</a>
+                <a [routerLink]="['/storage']" class="btn btn-primary">Storage</a>
+            </nav>
         </div>
     </div>
 </body>

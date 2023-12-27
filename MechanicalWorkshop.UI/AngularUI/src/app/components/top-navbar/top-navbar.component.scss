@@ -1,12 +1,12 @@
 .container {
     background-color: rgba(125, 6, 194, 0.518);
     border: 3px rgba(125, 6, 194, 0.867) solid;
-    width: 100vw;
-    max-width: 100vw;
+    max-width: calc(100vw - 6px);
     height: 8vh;
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
+    margin: 0;
 }
 
 .container * {
