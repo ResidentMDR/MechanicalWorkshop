@@ -30,6 +30,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseCors("AngularUI");
+
 app.MapControllers();
 
 app.Run();
