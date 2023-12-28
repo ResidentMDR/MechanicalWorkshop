@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    //background-color: rgba(150, 180, 200, 0.541);
+    // background-color: rgba(150, 180, 200, 0.541);
     height: 100%;
 }
 
@@ -24,21 +24,5 @@ body {
         display: flex;
         justify-content: left;
         margin-left: 50px;
-    }
-}
-
-.customer-container {
-    margin-left: 100px;
-    padding: 5px;
-    .customer {
-        background-color: rgba(97, 156, 195, 0.541);
-        font-size: 24px;
-        margin: 10,10,10,10;
-        color: black;
-        display: block;
-        width: calc(100vw - 200px);
-    }   
-    .customer:hover {
-        background-color: rgba(125, 6, 194, 0.518);
     }
 }

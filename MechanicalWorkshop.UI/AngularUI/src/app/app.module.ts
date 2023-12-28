@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeViewComponent } from './views/home/home-view/home-view.component';
 import { RouterModule } from '@angular/router';
+
+import { AppComponent } from './app.component';
+import { HomeViewComponent } from './views/home/home-view/home-view.component';
 import { TopNavbarComponent } from "./components/top-navbar/top-navbar.component";
 import { LeftNavbarComponent } from "./components/left-navbar/left-navbar.component";
 import { ContentViewComponent } from "./components/content-view/content-view.component";
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { ContentViewComponent } from "./components/content-view/content-view.com
         RouterModule,
         HttpClientModule,
         HomeViewComponent,
+        HeaderComponent,
         TopNavbarComponent,
         LeftNavbarComponent,
         ContentViewComponent

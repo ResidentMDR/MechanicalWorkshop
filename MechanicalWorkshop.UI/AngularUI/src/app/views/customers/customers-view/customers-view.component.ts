@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TopNavbarComponent } from '../../../components/top-navbar/top-navbar.component';
 import { LeftNavbarComponent } from '../../../components/left-navbar/left-navbar.component';
-import { ContentViewComponent } from '../../../components/content-view/content-view.component';
-import { APIService } from '../../../components/api-service/api.service';
+import { APIService } from '../../../api-service/api.service';
 import { ICustomer } from '../../../interfaces/icustomer';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-customers-view',
@@ -11,7 +11,7 @@ import { ICustomer } from '../../../interfaces/icustomer';
   imports: [
     TopNavbarComponent,
     LeftNavbarComponent,
-    ContentViewComponent
+    CommonModule,
   ],
   templateUrl: './customers-view.component.html',
   styleUrl: './customers-view.component.scss'
