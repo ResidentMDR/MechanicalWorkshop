@@ -1,5 +1,5 @@
 .container {
-    background-color: rgba(125, 6, 194, 0.518);
+    background-image: linear-gradient(90deg, rgba(158, 110, 193, 1) 0%, rgba(148, 24, 171, 1) 25%, rgba(110, 39, 160, 1) 50%, rgba(103, 34, 150, 1) 75%, rgba(57, 5, 90, 1) 100%);
     border: 3px rgba(125, 6, 194, 0.867) solid;
     max-width: calc(100vw - 6px);
     height: 8vh;
@@ -7,6 +7,9 @@
     justify-content: flex-start;
     align-items: center;
     margin: 0;
+    -webkit-box-shadow: 2px 6px 12px 12px rgba(150, 73, 169, 1);
+    -moz-box-shadow: 2px 6px 12px 12px rgba(150, 73, 169, 1);
+    box-shadow: 2px 6px 12px 12px rgba(150, 73, 169, 1);
 }
 
 .container * {
@@ -19,7 +22,7 @@
 }
 
 a.btn-primary {
-    background-color: purple;
+    background-color: rgb(80, 0, 91);
 }
 
 .btn-primary.active-link {
