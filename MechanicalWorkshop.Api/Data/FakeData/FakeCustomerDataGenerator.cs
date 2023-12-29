@@ -2,14 +2,14 @@
 
 namespace MechanicalWorkshop.Api.Data.FakeData
 {
-    public class FakeCustomerDataGenerator
+    public class FakeCustomerDataGenerator : IFakeDataGenerator<Customer>
     {
         public FakeCustomerDataGenerator()
         {
             
         }
 
-        public List<Customer> GenerateFakeData()
+        public List<Customer> SeedWithData()
         {
             var list = new List<Customer>
             {

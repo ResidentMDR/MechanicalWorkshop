@@ -24,7 +24,7 @@ namespace MechanicalWorkshop.Api.Controllers
         [HttpGet($"cars/1")]
         public Car GetCarById(int id)
         {
-            return new Car(id);
+            return new Car();
         }
 
         [HttpPost("addCar")]

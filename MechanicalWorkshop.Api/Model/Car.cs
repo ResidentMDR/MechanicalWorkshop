@@ -2,9 +2,9 @@
 {
     public record Car
     {
-        public Car(int id)
+        public Car()
         {
-            this.Id = id;
+
         }
 
         public Car(string brandName, string modelName)

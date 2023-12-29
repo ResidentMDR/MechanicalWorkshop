@@ -34,4 +34,15 @@ app.UseCors("AngularUI");
 
 app.MapControllers();
 
+//using (var context = new ApplicationDbContext())
+//{
+//    var data = new FakeRepairDataGenerator();
+
+//    var repairsList = data.SeedWithData();
+
+//    context.Repairs.AddRange(repairsList);
+
+//    context.SaveChanges();
+//}
+
 app.Run();
