@@ -4,6 +4,7 @@ using MechanicalWorkshop.Api;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MechanicalWorkshop.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231229220641_AddForeignKeyToCustomerTable")]
+    partial class AddForeignKeyToCustomerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -129,7 +132,7 @@ namespace MechanicalWorkshop.Api.Migrations
                     b.HasOne("MechanicalWorkshop.Api.Model.Customer", "Owner")
                         .WithMany("Cars")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Owner");
@@ -139,18 +142,15 @@ namespace MechanicalWorkshop.Api.Migrations
                 {
                     b.HasOne("MechanicalWorkshop.Api.Model.Car", "Car")
                         .WithMany()
-                        .HasForeignKey("CarId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("CarId");
 
                     b.HasOne("MechanicalWorkshop.Api.Model.Customer", "Customer")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("CustomerId");
 
                     b.HasOne("MechanicalWorkshop.Api.Model.Mechanic", "Mechanic")
                         .WithMany()
-                        .HasForeignKey("MechanicId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("MechanicId");
 
                     b.Navigation("Car");
 

@@ -1,6 +1,7 @@
 using MechanicalWorkshop.Api;
 using MechanicalWorkshop.Api.Data.FakeData;
 using MechanicalWorkshop.Api.Model;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,13 +37,26 @@ app.MapControllers();
 
 //using (var context = new ApplicationDbContext())
 //{
-//    var data = new FakeRepairDataGenerator();
+//    //var data = new FakeRepairDataGenerator();
+//    //var repairsList = data.SeedWithData();
+//    //context.Repairs.AddRange(repairsList);
 
-//    var repairsList = data.SeedWithData();
+//    //var data = new FakeCarDataGenerator();
+//    //var carsList = data.SeedWithData(context);
+//    //context.Cars.AddRange(carsList);
 
-//    context.Repairs.AddRange(repairsList);
+//    //var data = new FakeMechanicDataGenerator();
+//    //var mechanicsList = data.SeedWithData();
+//    //context.Mechanics.AddRange(mechanicsList);
 
-//    context.SaveChanges();
+//    //var data = new FakeCustomerDataGenerator();
+//    //var customersList = data.SeedWithData();
+//    //context.Customers.AddRange(customersList);
+
+//    //context.SaveChanges();
 //}
+
+//var data = new FakeCarDataGenerator();
+//data.SeedWithData(null);
 
 app.Run();
