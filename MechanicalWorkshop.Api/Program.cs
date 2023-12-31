@@ -35,28 +35,4 @@ app.UseCors("AngularUI");
 
 app.MapControllers();
 
-//using (var context = new ApplicationDbContext())
-//{
-//    //var data = new FakeRepairDataGenerator();
-//    //var repairsList = data.SeedWithData();
-//    //context.Repairs.AddRange(repairsList);
-
-//    //var data = new FakeCarDataGenerator();
-//    //var carsList = data.SeedWithData(context);
-//    //context.Cars.AddRange(carsList);
-
-//    //var data = new FakeMechanicDataGenerator();
-//    //var mechanicsList = data.SeedWithData();
-//    //context.Mechanics.AddRange(mechanicsList);
-
-//    //var data = new FakeCustomerDataGenerator();
-//    //var customersList = data.SeedWithData();
-//    //context.Customers.AddRange(customersList);
-
-//    //context.SaveChanges();
-//}
-
-//var data = new FakeCarDataGenerator();
-//data.SeedWithData(null);
-
 app.Run();
