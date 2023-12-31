@@ -13,11 +13,11 @@
             this.ModelName = modelName;
         }
 
-        public int Id { get; init; }
-        public string? VIN { get; init; }
-        public string? BrandName { get; init; }
-        public string? ModelName { get; init; }
-        public int CustomerId { get; init; }
-        public Customer Owner { get; init; }
+        public int Id { get; set; }
+        public string VIN { get; set; }
+        public string BrandName { get; set; }
+        public string ModelName { get; set; }
+        public int CustomerId { get; set; }
+        public Customer Owner { get; set; }
     }
 }

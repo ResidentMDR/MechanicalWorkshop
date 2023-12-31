@@ -1,6 +1,5 @@
 ﻿using MechanicalWorkshop.Api.Model;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
 
 namespace MechanicalWorkshop.Api
 {
