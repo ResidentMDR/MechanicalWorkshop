@@ -2,15 +2,15 @@
 {
     public record Repair
     {
-        public int Id { get; init; }
-        public Customer? Customer { get; init; }
-        public int? CustomerId { get; init; }
-        public Car? Car { get; init; }
-        public int? CarId { get; init; }
-        public string? Description { get; init; }
-        public double? Price { get; init; }
-        public DateTime? RegistrationDate { get; init; } = DateTime.Now;
-        public Mechanic? Mechanic { get; init; }
-        public int? MechanicId { get; init; }
+        public int Id { get; set; }
+        public Customer Customer { get; set; }
+        public int CustomerId { get; set; }
+        public Car Car { get; set; }
+        public int CarId { get; set; }
+        public string Description { get; set; }
+        public double? Price { get; set; }
+        public DateTime RegistrationDate { get; set; } = DateTime.Now;
+        public Mechanic? Mechanic { get; set; }
+        public int? MechanicId { get; set; }
     }
 }

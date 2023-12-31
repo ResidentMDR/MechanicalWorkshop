@@ -1,5 +1,6 @@
 ﻿using MechanicalWorkshop.Api.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 using System.Runtime.CompilerServices;
 
 namespace MechanicalWorkshop.Api
@@ -50,7 +51,61 @@ namespace MechanicalWorkshop.Api
                     .OnDelete(DeleteBehavior.Restrict)
                     .IsRequired();
             });
+
+            //var context = new ApplicationDbContext();
+            //var customers = context.Customers.ToList();
+
+            //var cars = modelBuilder.Entity<Car>()
+            //    .HasData(
+            //    new Car
+            //    {
+            //        Id = 1,
+            //        VIN = "1ABC123",
+            //        BrandName = "Toyota",
+            //        ModelName = "Camry",
+            //        CustomerId = customers[0].Id,
+            //        Owner = customers.FirstOrDefault()
+            //    }
+            //    );
+
         }
+        //new Car
+        //{
+        //    Id = 2,
+        //    VIN = "2XYZ456",
+        //    BrandName = "Honda",
+        //    ModelName = "Accord",
+        //    CustomerId = customers[0].Id,
+        //    Owner = customers.FirstOrDefault(e => e.Id == customers[0].Id)
+        //},
+        //new Car
+        //{
+        //    Id = 3,
+        //    VIN = "3LMN789",
+        //    BrandName = "Ford",
+        //    ModelName = "Fusion",
+        //    CustomerId = 3,
+        //    Owner = new Customer(3)
+        //},
+        //new Car
+        //{
+        //    Id = 4,
+        //    VIN = "4PQR012",
+        //    BrandName = "Chevrolet",
+        //    ModelName = "Malibu",
+        //    CustomerId = 1,
+        //    Owner =
+        //},
+        //new Car
+        //{
+        //    Id = 5,
+        //    VIN = "5STU345",
+        //    BrandName = "Nissan",
+        //    ModelName = "Altima",
+        //    CustomerId = 2,
+        //    Owner = new Customer(2)
+        //}
+
 
         public DbSet<Mechanic> Mechanics { get; set; }
         public DbSet<Customer> Customers { get; set; }
