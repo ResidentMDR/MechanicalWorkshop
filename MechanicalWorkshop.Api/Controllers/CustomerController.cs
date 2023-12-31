@@ -1,5 +1,4 @@
-﻿using MechanicalWorkshop.Api.Data.FakeData;
-using MechanicalWorkshop.Api.Model;
+﻿using MechanicalWorkshop.Api.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
