@@ -11,8 +11,35 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the repairs page</h1>
+    <h4>Add new Repair: </h4>
+    <div class="forms-container">
+      <label for="customer">Customer: </label>
+      <input id="customer" type="text" [formControl]="customer">
+      <label for="car">Car: </label>
+      <input id="car" type="text" [formControl]="car">
+      <label for="mechanic">Mechanic: </label>
+      <input id="mechanic" type="text" [formControl]="mechanic">
+      <label for="description">Description: </label>
+      <input id="description" type="text" [formControl]="description">
+      <label for="price">Estimated Price: </label>
+      <input id="price" type="text" [formControl]="price">
+      
+      <button class="btn btn-primary">Add</button>
+    </div>
+    <hr>
+    <div class="repair-container">
+      <h4>Repairs:</h4>
+      <div *ngFor="let repair of repairs" class="repair btn btn-primary">
+        <p> 
+          Customer id: <b>{{repair.customerId}}</b> <br> 
+          Car id: <b>{{repair.carId}}</b> <br> 
+          Mechanic id: <b>{{repair.mechanicId}}</b> <br>
+          Description: {{repair.description}} <br>
+          Estimated price: {{repair.price}} <br>
+          Registered: {{repair.registrationDate}}
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
-

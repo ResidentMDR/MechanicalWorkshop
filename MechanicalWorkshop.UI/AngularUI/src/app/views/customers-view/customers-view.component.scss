@@ -1,10 +1,10 @@
-$customerWidth: calc(100vw - 200px);
+$recordWidth: calc(100vw - 200px);
 
 .container {
     margin: 0px 100px 10px 100px;
     padding-top: 10px;
     hr {
-        width: $customerWidth;
+        width: $recordWidth;
     }
 }
 
@@ -28,7 +28,7 @@ $customerWidth: calc(100vw - 200px);
         font-size: 24px;
         color: black;
         display: block;
-        width: $customerWidth;
+        width: $recordWidth;
     }   
     .customer:hover {
         background-color: rgba(125, 6, 194, 0.518);

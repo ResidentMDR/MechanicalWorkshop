@@ -1,4 +1,39 @@
+$recordWidth: calc(100vw - 200px);
+
 .container {
     margin: 0px 100px 10px 100px;
     padding-top: 10px;
+    hr {
+        width: $recordWidth;
+    }
+}
+
+.forms-container {
+    padding-bottom: 15px;
+    padding-left: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .btn-primary {
+        background-color: green;
+    }
+    label {
+        padding-right: 3px;
+    }
+    input {
+        margin-right: 8px;
+    }
+}
+
+.repair-container {
+    .repair {
+        background-color: rgba(97, 156, 195, 0.541);
+        font-size: 24px;
+        color: black;
+        display: block;
+        width: $recordWidth;
+    }   
+    .repair:hover {
+        background-color: rgba(125, 6, 194, 0.518);
+    }
 }
