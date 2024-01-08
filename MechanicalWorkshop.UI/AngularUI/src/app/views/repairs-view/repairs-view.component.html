@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <h4>Nowa naprawa: </h4>
+    <h3>Nowa naprawa: </h3>
     <div class="forms-container">
       <label for="customer">Id klienta: </label>
       <input id="customer" type="text" [formControl]="customer">
@@ -28,15 +28,18 @@
     </div>
     <hr>
     <div class="repair-container">
-      <h4>Repairs:</h4>
+      <h2>Naprawy:</h2>
+      <div *ngIf="showLoader" class="loading-spinner">
+        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+      </div>
       <div *ngFor="let repair of repairs" class="repair btn btn-primary">
         <p> 
-          Customer id: <b>{{repair.customerId}}</b> <br> 
-          Car id: <b>{{repair.carId}}</b> <br> 
-          Mechanic id: <b>{{repair.mechanicId}}</b> <br>
-          Description: {{repair.description}} <br>
-          Estimated price: {{repair.price}} <br>
-          Registered: {{repair.registrationDate}}
+          Id klienta: <b>{{repair.customerId}}</b> <br> 
+          Id pojazdu: <b>{{repair.carId}}</b> <br> 
+          Id mechanika: <b>{{repair.mechanicId}}</b> <br>
+          Opis: {{repair.description}} <br>
+          Szacowany koszt: {{repair.price}} <br>
+          Data rejestracji: {{repair.registrationDate}}
         </p>
       </div>
     </div>

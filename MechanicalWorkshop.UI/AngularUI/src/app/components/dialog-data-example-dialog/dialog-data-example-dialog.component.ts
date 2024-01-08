@@ -2,8 +2,11 @@ import {Component, Inject} from '@angular/core';
 import {
   MatDialog,
   MAT_DIALOG_DATA,
+  MatDialogRef,
   MatDialogTitle,
   MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 
@@ -27,6 +30,10 @@ export class DialogDataExample {
     this.dialog.open(DialogDataExampleDialogComponent, {
     });
   }
+
+  // onNoClick(): void {
+  //   this.dialogRef.close();
+  // }
 }
 
 @Component({
@@ -37,5 +44,12 @@ export class DialogDataExample {
   styleUrl: './dialog-data-example-dialog.component.scss'
 })
 export class DialogDataExampleDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(
+    public dialogRef: MatDialogRef<DialogDataExampleDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

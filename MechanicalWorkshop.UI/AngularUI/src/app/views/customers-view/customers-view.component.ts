@@ -5,6 +5,7 @@ import { APIService } from '../../api-service/api.service';
 import { ICustomer } from '../../interfaces/icustomer';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-customers-view',
@@ -14,6 +15,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     LeftNavbarComponent,
     CommonModule,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ],
   templateUrl: './customers-view.component.html',
   styleUrl: './customers-view.component.scss'
@@ -22,6 +24,7 @@ export class CustomersViewComponent implements OnInit {
   customers: ICustomer[] = [];
   name = new FormControl('');
   lastName = new FormControl('');
+  showLoader = true;
 
   constructor(private apiService: APIService) {}
 
@@ -29,6 +32,7 @@ export class CustomersViewComponent implements OnInit {
     this.apiService.getAllCustomers().subscribe(
       (data: ICustomer[]) => {
         this.customers = data;
+        this.showLoader = false;
       },
     );
   }

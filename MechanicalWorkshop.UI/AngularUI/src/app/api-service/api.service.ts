@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ICustomer } from 'src/app/interfaces/icustomer'
 import { IRepair } from '../interfaces/irepair';
+import { IStorageItem } from '../interfaces/istorage-item'
 import { environment } from '../environments/environment';
 
 @Injectable({
@@ -21,5 +22,9 @@ export class APIService {
 
   getAllRepairs(): Observable<IRepair[]> {
     return this.httpClient.get<IRepair[]>(`${this.apiUrl}/v1/Repair/Repairs`, { headers: this.headers });
+  }
+
+  getAllStorageItems(): Observable<IStorageItem[]> {
+    return this.httpClient.get<IStorageItem[]>(`${this.apiUrl}/v1/StorageItem/StorageItems`, { headers: this.headers });
   }
 }

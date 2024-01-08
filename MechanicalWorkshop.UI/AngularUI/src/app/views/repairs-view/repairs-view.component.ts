@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { APIService } from 'src/app/api-service/api.service';
 import { IRepair } from 'src/app/interfaces/irepair';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { IRepair } from 'src/app/interfaces/irepair';
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ],
   templateUrl: './repairs-view.component.html',
   styleUrl: './repairs-view.component.scss'
@@ -23,6 +25,7 @@ export class RepairsViewComponent implements OnInit {
   description = new FormControl('');
   price = new FormControl('');
   repairs: IRepair[] = [];
+  showLoader = true;
 
   constructor(private apiService: APIService) {}
 
@@ -30,6 +33,7 @@ export class RepairsViewComponent implements OnInit {
     this.apiService.getAllRepairs().subscribe(
       (data: IRepair[]) => {
         this.repairs = this.formatDates(data);
+        this.showLoader = false;
       }
     );
   }

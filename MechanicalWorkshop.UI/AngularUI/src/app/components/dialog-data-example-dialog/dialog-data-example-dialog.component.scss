@@ -1,0 +1,16 @@
+.button-container {
+    display: flex; align-items: center; justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+button {
+    background-color: #d4d4d4;
+    color: black;
+}
+
+button:hover {
+    background-color: #b4b4b4;
+    color: black;
+}
+

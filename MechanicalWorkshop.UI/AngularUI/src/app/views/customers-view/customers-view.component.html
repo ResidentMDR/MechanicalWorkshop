@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <h4>Nowy klient: </h4>
+    <h3>Nowy klient: </h3>
     <div class="forms-container">
       <label for="name">Imię: </label>
       <input id="name" type="text" [formControl]="name">
@@ -22,7 +22,10 @@
     </div>
     <hr>
     <div class="customer-container">
-      <h4>Wszyscy klienci:</h4>
+      <h2>Wszyscy klienci:</h2>
+      <div *ngIf="showLoader" class="loading-spinner">
+        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+      </div>
       <div *ngFor="let customer of customers" class="customer btn btn-primary">
         <p>{{ customer.id }}. {{ customer.firstName }} {{ customer.lastName }} </p>
       </div>
