@@ -14,5 +14,13 @@ import { LeftNavbarComponent } from '../../components/left-navbar/left-navbar.co
 })
 
 export class HomeViewComponent {
-
+  downloadPdf(): void {
+    const pdfPath = '../../../assets/SamplePdf.pdf';
+    const link = document.createElement('a');
+    link.href = pdfPath;
+    link.download = 'SamplePdf.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }
