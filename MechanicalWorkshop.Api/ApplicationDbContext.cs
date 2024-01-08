@@ -54,5 +54,6 @@ namespace MechanicalWorkshop.Api
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Repair> Repairs { get; set; }
+        public DbSet<StorageItem> StorageItems { get; set; }
     }
 }
