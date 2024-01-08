@@ -17,8 +17,7 @@ namespace MechanicalWorkshop.Api
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer
-                (@"Server=localhost\SQLEXPRESS;Database=Workshop.db;Trusted_Connection=True;TrustServerCertificate=true");
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

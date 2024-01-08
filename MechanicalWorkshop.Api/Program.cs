@@ -11,10 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container .
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("ProdConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<ApplicationDbContext>();
 builder.Services.AddCors(options => options.AddPolicy("AngularUI",
     policy =>
     {
@@ -38,12 +42,12 @@ app.UseCors("AngularUI");
 
 app.MapControllers();
 
-var filePath = @"C:\Users\marci\Downloads\SamplePdf";
+//var filePath = @"C:\Users\marci\Downloads\SamplePdf";
 
-var model = InvoiceDocumentDataSource.GetInvoiceDetails();
-var document = new InvoiceDocument(model);
-document.GeneratePdf(filePath);
+//var model = InvoiceDocumentDataSource.GetInvoiceDetails();
+//var document = new InvoiceDocument(model);
+//document.GeneratePdf(filePath);
 
-Process.Start("explorer.exe", filePath);
+//Process.Start("explorer.exe", filePath);
 
 app.Run();
