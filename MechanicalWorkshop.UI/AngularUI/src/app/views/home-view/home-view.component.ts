@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 import { TopNavbarComponent } from '../../components/top-navbar/top-navbar.component';
 import { LeftNavbarComponent } from '../../components/left-navbar/left-navbar.component';
 
@@ -8,6 +10,7 @@ import { LeftNavbarComponent } from '../../components/left-navbar/left-navbar.co
   imports: [
     TopNavbarComponent,
     LeftNavbarComponent,
+    RouterModule
   ],
   templateUrl: './home-view.component.html',
   styleUrl: './home-view.component.scss'
